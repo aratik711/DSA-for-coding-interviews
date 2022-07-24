@@ -8,8 +8,16 @@ class LinkedList:
     def print_list(self):
         cur_node = self.head
         while cur_node:
-            print(cur_node.data)
+            print(cur_node.data, end="->")
             cur_node = cur_node.next
+        print("None")
+    def get_head(self):
+        return self.head
+    def is_empty(self):
+        if self.head is None:
+            return True
+        else:
+            return False
     def append(self, data):
         new_node = Node(data)
         if self.head is None:
@@ -375,15 +383,15 @@ class LinkedList:
 # llist.move_tail_to_head()
 # print("\n")
 # llist.print_list()
-llist1 = LinkedList()
-llist1.append(5)
-llist1.append(6)
-llist1.append(3)
-
-llist2 = LinkedList()
-llist2.append(8)
-llist2.append(4)
-llist2.append(2)
-
-print(365 + 248)
-print((llist1.sum_two_lists(llist2)).print_list())
+# llist1 = LinkedList()
+# llist1.append(5)
+# llist1.append(6)
+# llist1.append(3)
+#
+# llist2 = LinkedList()
+# llist2.append(8)
+# llist2.append(4)
+# llist2.append(2)
+#
+# print(365 + 248)
+# print((llist1.sum_two_lists(llist2)).print_list())
